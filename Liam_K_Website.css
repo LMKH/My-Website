@@ -1,0 +1,231 @@
+/*the body. This selects all relevent elements. e.g. selected here the font is the same throughout the page.*/
+body{
+    font-family: Ubuntu, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/*.hero. this is the top part of the page. I specify the min-height. 85 (viewport height), 
+so no matter how large/small your screen is the min height will be 85.
+background colour. specificly chosen as i wanted my page to have a cool sharp silver futuristic feel.
+display: inline-block - type of width and height*/
+.hero{
+    min-height: 85vh;
+    background-color: rgb(239, 239, 239);
+    color: black;
+    display: inline-block;
+}
+
+/*this is seen at the very top of the web page. My name - software dev and on the right side a "contact me" button
+flex, can alter the width and height. space-between, center and the padding = 
+makes it spaced out, aligned correctly and enough space around the elements*/
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+}
+
+/* my name. Liam Kavanagh Software Developer part. light font-weight at 300. sleek futuristic style.
+2rem size - rem is a unit of measurement used in css. i find it easier to use rems as they're not as stuck if i used pixels.*/
+.navigation .title{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* contact me button. in the html document i have used a relative link. (notibly Wikipedia makes use of relative links to direct users to certain parts of a page)
+when the user clicks the button it will take them instantly to the "contact me" part of the page. 
+border radius lets me curve the corners, so it's more sleek looking. fits the theme better instead of a box. */
+.navigation .contact_me{
+    background-color: white;
+    padding: 16px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+/*opacity & hover. when you hover over the button it will turn slightly transparent. just to indicate that you are hovering over it*/
+.navigation .contact_me:hover{
+    opacity: 0.8;
+}
+
+/*padding - the spacing around my "headline"*/ 
+.hero_content{
+    padding: 0 15%;
+}
+/*"the headline" part. letter spacing, is the space between each individual letter. medium weight and decent size.*/ 
+.heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 6px;
+    padding: 32px 0;
+}
+
+/*two column. thats the design, the sort of split throughout the whole page. */
+.two_column{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* about me class. assigned to every sub heading.*/
+.two_column .about_me{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/*paragraph decendants of two column. what every paragraph inside of the columns will look like*/
+.two_column > p{
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+
+/*my skills*/
+.two_column .skills{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+}
+/*float left, with margin on the top & bottom*/
+.two_column .skills li{
+    width: 50%;
+    float: left;
+    margin: 8px 0;
+}
+
+/* education. here we have a different background colour. A new min-height*/
+.experience_education{
+    background-color: rgb(84, 156, 149);
+    padding: 64px 0;
+    min-height: 65vh;
+}
+/*specifies the padding the the left and right at 15%*/
+.experience_education_content{
+    padding: 0 15%;
+}
+/*this is where all the information is held. width of 50% and float left*/
+.two_column .ed_post{
+    width: 50%;
+    float: left;
+}
+
+/*ed head is the subtitle for each point inside of Wmy experience and eduction"
+bold size and slightly smaller than the main title to the left*/
+.ed_head{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+/*the size of the text inside.*/
+.ed_text{
+    font-size: 1rem;
+}
+/*the date. same size as the text, however it has a lighter weight, a silver colour. (to continue to sleek silver look)
+some margin bottom so there is a bit of space between the next section*/
+.ed_post .ed_date{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: silver;
+    margin-bottom: 28px;
+}
+/* extra margin on top so it aligns better with the main title to the left*/
+.ed_post{
+    margin-top: 24px;
+}
+/*specifically the paragraphs inside the ed_post have a bit more margin on top & bottom*/
+.ed_post p{
+    margin: 8px 0;
+}
+
+
+/* contact. new colour, smaller min-height, padding round the top & bottom*/
+.contact_section{
+    background-color: darkslategrey;
+    min-height: 60vh;
+    padding: 64px 0;
+}
+
+.contact_content{
+    padding: 0 15%;
+}
+
+.contact_details{
+    width: 50%;
+    float: left;
+    margin-top: 24px;
+}
+
+.contact_details p{
+    margin: 8px 0;
+}
+
+.contact_title{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+/*in the subsections where the info would go it is silver and itallics. just to show contrast*/ 
+.contact_details .contact_info{
+    font-size: 1.5rem;
+    font-style: italic;
+    color: silver;
+    margin-bottom: 32px;
+}
+
+/* footer. smallest part as it does not include much. includes acknowledgement and my name.*/
+footer{
+    background-color: silver;
+    color: rgb(76, 76, 76);
+    padding: 60px;
+}
+/*the text is aligned in the center*/
+.footer_content{
+    text-align: center;
+}
+
+/*Media queries each max-widths is what changes on the screen at each size*/
+/*here i'm selecting 3 different classes. easy to just seperate them by using commas rather than re-writting them all
+when they're under 1000px the padding will turn to 5% down from 15% to make sure everything fits better.*/
+@media only screen and (max-width:1000px){
+    .hero_content,
+    .experience_education_content,
+    .contact_content{
+        padding: 0 5%;
+    }
+}
+/*headings become smaller at 750px*/
+@media only screen and (max-width:750px){
+    .heading{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .heading{
+        font-size: 1.7rem;
+    }
+    /* and paragraphs which are direct children of two_column will have a width of 100% also skills*/
+    .two_column > p{
+        width: 100%;
+    }
+    /*changing the widths too 100% so they fit longways better*/
+    .two_column .skills{
+        width: 100%;
+    }
+    .two_column .ed_post{
+        width: 100%;
+    }
+    /*subheadings lose margin and become smaller*/
+    .about_me{
+        font-weight: 500;
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+}
+/*at the smallest width the "contact me" button will disappear*/
+@media only screen and (max-width:500px){
+    .heading{
+        font-size: 1.2rem;
+    }
+    .contact_me{
+        display: none;
+    }
+}

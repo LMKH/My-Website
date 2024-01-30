@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--first create the html document. the head is full of the meta data. behind the scenes. the user does not see this-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link the html file and the css file together-->
+    <link rel="stylesheet" href="Liam_K_Website.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--the font i have chosen throughout this webpage is first loaded from the html file. 
+        it is better to do this than putting the fonts in the css file i find.
+    The font is from Google Fonts. I have also included the multiple weights of the font so I can have a variety throughout.-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--Title. What we see in the tabs at the top.-->
+    <title>Liam Kavanagh</title>
+</head>
+
+<!--the body. this is what the user sees.-->
+<body>
+    <!--create a section with a class of "hero". this section is for the first part of the page which includes:
+    the headline, nav bar, the about me and skills-->
+    <section class="hero">
+        <!--the header with a class of "navigation". this is where my "logo" is with a contact button-->
+        <header class="navigation">
+            <!--paragraphs, class = title. pipe symbol as a seperator. emphasised "Software Developer"-->
+            <p class="title">Liam Kavanagh | <em>Software Developer</em></p>
+            <!--href atribute. once the button is clicked it will take you donw to the contacts part of the page.
+            the href is connected to an id in the contact header.-->
+            <a class="contact_me" href="#contact">Contact Me</a>
+        </header>
+
+<!--div with the class of hero_content. within this I place a h1 with the class of "heading". this is my headline-->
+        <div class="hero_content">
+            <h1 class="heading">I am an ambitious and hardworking Software Developer, with a solid foundation acquired through HyperionDev's Software Engineering Skills Bootcamp. I am eager to kickstart my career. </h1>
+            <!--<div class="two_column"> is used throughout the webpage. 
+                easy to just give them all the same class and work through one time in the css file.
+            this is what gives the webpage the 2 column look.-->
+            <div class="two_column">
+                <!--class about_me same workings as the two_column class. 
+                    assign to each part that needs it and have a synced style from the css page-->
+                <p class="about_me">About Me</p>
+                <!--paragraphs with breakpoints to leave a line between, just cause it looks better and not overcrowded.-->
+                <p>My practical experience as a dedicated carer showcases my strong work ethic, adaptability, and interpersonal skills. 
+                    <br>
+                    <br>I am proficient in software development, systems analysis, and design, and I am poised to contribute effectively to dynamic projects. My multilingual abilities in German and Russian add an extra layer of versatility. 
+                    <br>
+                    <br>My passion for coding, coupled with my diverse background, positions me as a promising junior software developer ready to embrace new challenges and contribute to innovative solutions.
+                </p>
+            </div>
+            
+<!--another div with the class of two column to keep the style continuing -->
+            <div class="two_column">
+                <!--here in an unordered list, i list my skills-->
+                <p class="about_me">My Skills</p>
+                <ul class="skills">
+                    <li>Python Programming</li>
+                    <li>HTML & CSS</li>
+                    <li>SQL</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<!--this section is where i talk about My Experience and Education. 
+new classes as it's a new section designed to be kept in this section.-->
+    <section class="experience_education">
+        <div class="experience_education_content">
+            <!--keeping the two_column and about_me classes as they are needed to keep the uniform style throughout the page-->
+            <div class="two_column">
+                <p class="about_me">My Experience and Education</p>
+                
+                <!--div class ="ed_post". in this div i include subtitles in "ed_head" and text in "ed text"-->
+                <div class="ed_post">
+                    <p class="ed_head">HyperionDev: Software Developer Trainee</p>
+                    <p class="ed_text">
+                        At HyperionDev, I designed solutions to problems and expressed them using pseudo-code.
+                        I learned how to write useful industry-standard code using Python.
+                        I became comfortable demonstrating familiarity with the Python syntax and libraries that are foundational to Software Engineering.
+                    </p>
+                    <!--in "ed_date" i wanted the colour to be siver, different from the rest of the text - that's why it is in its own class-->
+                    <p class="ed_date">March 2023 - July 2023</p>
+
+                    <p class="ed_head">Udemy</p>
+                    <p class="ed_text"> By doing Udemy courses, I have demonstrated my commitment to continuous learning by delving into programming languages such as Python, HTML, CSS, JavaScript, and SQL.
+                    </p>
+                    <p class="ed_date">August 2023 - Present</p>
+
+                    <p class="ed_head">Care Worker</p>
+                    <p class="ed_text">
+                        I have been a care worker since the age of 14. Being a care worker has given me invaluable skills.
+                        Having strong interpersonal and communication skills.
+                        Having great organisation and time management skills.
+                        Having strong verbal and written communication skills. Being a trusted listener. Having excellent multi-tasking skills.
+                    </p>
+                    <p class="ed_date">March 2013 - Present</p>
+                </div>
+        </div>
+    </section>
+
+<!--Contact section, new section & div. here i include an id with "contact". this is the relative link in the html file.
+this is how the button click at the top knows where to take the user to.-->
+    <section class="contact_section" id="contact">
+        <div class="contact_content">
+            <div class="two_column">
+                <p class="about_me">Contact Me</p>
+                <!--class contact details. includes the contact title i.e. Telephone and contact info the number for example
+                these are in their own classes as they are styled differently in the css file.-->
+                <div class="contact_details">
+                    <p class="contact_title">Telephone</p>
+                    <p class="contact_info">078500 74321</p>
+                    <p class="contact_title">Email</p>
+                    <p class="contact_info">@arealemail.com</p>
+                    <p class="contact_title">LinkedIn</p>
+                    <p class="contact_info">@areallinkedin</p>
+                    <p class="contact_title">HyperionDev</p>
+                    <p class="contact_info">@myprofile</p>
+                    <p class="contact_title">GitHub</p>
+                    <p class="contact_info">@mygithub</p>
+            </div>
+        </div>
+    </section>
+
+<!--footer. seen at the very bottom of the page-->
+    <footer>
+        <div class="footer_content">
+            <!--here inside the footer i pay thanks and an acknowledgement, end credits-->
+            <p>I was taught HTML & CSS by Colt Steele in his Udemy course "The HTML & CSS Bootcamp". I acknowledge him and thank him for his teaching!
+                <br>This project has been expanded upon with my own designs and additions.
+                <br>Liam Kavanagh 2024
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
